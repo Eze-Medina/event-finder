@@ -1,0 +1,25 @@
+.container {
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  gap: 5px;
+  color: #2980b9;
+  color: -webkit-linear-gradient(to right, #2c3e50, #2980b9); 
+  color: linear-gradient(to right, #2c3e50, #2980b9);
+}
+
+.appIcon {
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9); 
+  background: linear-gradient(to right, #2c3e50, #2980b9);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
