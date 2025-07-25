@@ -1,7 +1,15 @@
-import style from './nav.module.css'
+import { useState } from 'react'
 import { Calendar, Moon, Sun } from "lucide-react"
+import style from './nav.module.css'
 
 export const Nav = () => {
+  
+  const [active, setActive] = useState(true)
+  
+  const toggle = () => {
+    setActive(!active)
+  }
+
   return (
     <div className={style.container}>
       <div className={style.icon}>
@@ -16,7 +24,11 @@ export const Nav = () => {
         <h1>EventHub</h1>
       </div>
       <div className={style.theme}>
-        <Moon size={20}/>
+        {
+          active ? 
+            <Moon onClick={toggle} size={20}/> : 
+            <Sun onClick={toggle} size={20}/>
+        }
       </div>  
     </div>
   )
