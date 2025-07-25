@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.3fr;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .content {

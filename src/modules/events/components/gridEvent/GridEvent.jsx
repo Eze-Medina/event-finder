@@ -7,6 +7,9 @@ export const GridEvent = () => {
         <Card/>
         <Card/>
         <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
     </div>
   )
 }
