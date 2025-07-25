@@ -1,5 +1,16 @@
+import { useState } from 'react';
 import style from './filter.module.css'
-import { Search, Filter as Filter2, Music, Trophy, Palette, Theater, Camera, Gamepad2} from "lucide-react"
+import { FilterButton } from '../filterButton/FilterButton';
+import { 
+  Search, 
+  Filter as Filter2, 
+  Music, 
+  Trophy, 
+  Palette, 
+  Theater, 
+  Camera, 
+  Gamepad2} 
+from "lucide-react"
 
 const categorias = [
   { icono: <Filter2 size={17} />, texto: 'All Events' },
@@ -13,10 +24,12 @@ const categorias = [
 
 export const Filter = () => {
 
+  const [activoIndex, setActivoIndex] = useState(0);
+
   const manejarClick = () => {
     console.log("¡Hiciste clic!");
   };
-
+  
   return (
     <div>
       <div className={style.container1}>
@@ -28,11 +41,13 @@ export const Filter = () => {
         </div>
       </div>
       <div className={style.container2}>
-        {categorias.map((categoria, idx) => (
-          <button key={idx}>
-            {categoria.icono}
-            {categoria.texto}
-          </button>
+        {categorias.map((categoria, index) => (
+          <FilterButton
+            key={index}
+            cat={categoria}
+            activo={activoIndex === index}
+            onClick={() => setActivoIndex(index)}
+          />
         ))}
       </div>
     </div>

@@ -1,0 +1,32 @@
+.btn-inactivo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  border: solid 1px rgb(212, 212, 212);
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.btn-activo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+  border: solid 1px rgb(212, 212, 212);
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.btn-inactivo:hover{
+  transform: scale(1.1);
+}
+
+.btn-activo:hover{
+  transform: scale(1.1);
+}

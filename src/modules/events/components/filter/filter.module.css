@@ -41,19 +41,3 @@ input:focus {
   gap: 15px;
   margin: 20px;
 }
-
-.container2 button {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  background-color: white;
-  border-radius: 50px;
-  padding: 10px;
-  border: solid 1px rgb(212, 212, 212);
-  cursor: pointer;
-  transition: 0.1s linear;
-}
-
-.container2 button:hover {
-  transform: scale(1.1);
-}
