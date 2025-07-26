@@ -16,7 +16,7 @@ export const format = (resp) => {
 
     data.push({
       name: resp[index].name,
-      starDate: dateFormat,
+      startDate: dateFormat,
       startTime: timeFormat,
       eventType: resp[index].classifications[0].segment.name,
       location: resp[index]._embedded.venues[0].name
