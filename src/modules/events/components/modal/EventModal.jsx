@@ -1,6 +1,8 @@
 import { Calendar, MapPin, X } from 'lucide-react'
 import style from './eventModal.module.css'
 import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { showModal } from '../../../../store/slices/event';
 
 const placeHolder = {
   name: 'New York Yankees vs. Baltimore Orioles',
@@ -13,9 +15,11 @@ const placeHolder = {
 export const EventModal = () => {
   
   const modalRef = useRef();
+  const dispatch = useDispatch();
+  const { eventModal } = useSelector( state => state.events );
   
   const onClose = () => {
-    console.log('cerrando')
+    dispatch(showModal());
   }
 
   useEffect(() => {
@@ -35,15 +39,15 @@ export const EventModal = () => {
         <button onClick={onClose}><X size={20}/></button>
         <img src="https://placehold.co/600x250" alt="" />
         <div className={style.name}>
-          <h2>{placeHolder.name}</h2>
+          <h2>{eventModal.event.name}</h2>
           <p>$50 - $275</p>
         </div>
         <div className={style.sportType}>
-          <p>{placeHolder.eventType}</p>
+          <p>{eventModal.event.eventType}</p>
         </div>
         <div className={style.eventDate}>
-          <p><Calendar size={20}/>{placeHolder.startDate}</p>
-          <p><MapPin size={20}/>{placeHolder.location} {placeHolder.startTime}</p>
+          <p><Calendar size={20}/>{eventModal.event.startDate}</p>
+          <p><MapPin size={20}/>{eventModal.event.location} {eventModal.event.startTime}</p>
         </div>
         <h3>About this event</h3>
         <p>

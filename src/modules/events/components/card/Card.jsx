@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import { Calendar, MapPin} from 'lucide-react'
 import style from './card.module.css'
+import { useDispatch } from 'react-redux'
+import { chageModalData, showModal } from '../../../../store/slices/event'
 
 export const Card = ({ data }) => {
   
-  const [active, setActive] = useState(false)
+  const dispatch = useDispatch();
   
   const toggleModal = () => {
-    setActive(!active)
+    dispatch(chageModalData(data))
+    dispatch(showModal());
   }
 
   return (

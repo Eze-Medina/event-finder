@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { getEvents } from '../../helpers/getEvents'
-import { format } from '../../helpers/format'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { chagenPage, loadEvent } from '../../../../store/slices/event'
 import { Card } from '../card/Card'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import style from './gridEvent.module.css'
@@ -15,30 +15,24 @@ const placeHolder = {
 
 export const GridEvent = () => {
   
-  const [eventsData, setEventsData] = useState()
-  const [page, setPage] = useState(0)
+  const dispatch = useDispatch();
+  const { eventList, page } = useSelector( state => state.events );
 
   useEffect(() => {
-    
-    const recuperarInfo = async () => {
-      const resp = await getEvents(page);
-      const data = format(resp);
-      setEventsData(data);
-    }
-    recuperarInfo();
-  }, [page])
+    dispatch(loadEvent(page));
+  }, [page]);
   
   const alterPage = (move) => {
     if(page > 0 | move > 0){
-      setPage( c => c + move)
+      dispatch(chagenPage(move))
     }
   }
 
   return (
     <div className={style.cardContainer}>
-        { (eventsData === undefined) 
+        { (eventList === undefined) 
             ? Array.from({ length: 6 }).map((_, i) => <Card data={placeHolder} key={i} />)
-            : eventsData.map((event, idx) => (
+            : eventList.map((event, idx) => (
                 <Card data={event} key={idx}/>
             ))
         }
