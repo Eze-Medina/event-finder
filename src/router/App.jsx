@@ -2,6 +2,7 @@ import { Nav } from "../components/nav/Nav"
 import { Footer } from "../components/footer/Footer"
 import { EventFinder } from "./pages/EventFinder"
 import style from './app.module.css'
+import { EventModal } from "../modules/events/components/modal/EventModal"
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
         <Nav/>
         <EventFinder/>
         <Footer/>
+        {/* <EventModal/> */}
       </div>
     </div>
   )

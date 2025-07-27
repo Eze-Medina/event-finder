@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { getEvents } from '../../helpers/getEvents'
 import { format } from '../../helpers/format'
 import { Card } from '../card/Card'
-import style from './gridEvent.module.css'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import style from './gridEvent.module.css'
 
 const placeHolder = {
   name: '',
@@ -16,17 +16,24 @@ const placeHolder = {
 export const GridEvent = () => {
   
   const [eventsData, setEventsData] = useState()
-  
+  const [page, setPage] = useState(0)
+
   useEffect(() => {
     
     const recuperarInfo = async () => {
-      const resp = await getEvents();
+      const resp = await getEvents(page);
       const data = format(resp);
       setEventsData(data);
     }
     recuperarInfo();
-  }, [])
+  }, [page])
   
+  const alterPage = (move) => {
+    if(page > 0 | move > 0){
+      setPage( c => c + move)
+    }
+  }
+
   return (
     <div className={style.cardContainer}>
         { (eventsData === undefined) 
@@ -36,9 +43,13 @@ export const GridEvent = () => {
             ))
         }
         <div className={style.page}>
-          <button><ChevronLeft/></button>
-          <p>page</p>
-          <button><ChevronRight/></button>
+          <button
+            onClick={() => alterPage(-1)}>
+              <ChevronLeft/></button>
+          <p>{page + 1}</p>
+          <button
+            onClick={() => alterPage(1)}>
+              <ChevronRight/></button>
         </div>
     </div>
   )
