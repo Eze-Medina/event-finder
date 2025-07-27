@@ -37,7 +37,9 @@ export const Filter = () => {
   };
   const filterCategory = (category) => {
     dispatch(resetPage());
-    dispatch(filterByCategory(page,category));
+    (category === 'All Events')
+      ?dispatch(filterByCategory(page))
+      :dispatch(filterByCategory(page,category));
   };
   
   return (

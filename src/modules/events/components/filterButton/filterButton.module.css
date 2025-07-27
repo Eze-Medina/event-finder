@@ -8,6 +8,7 @@
   border: solid 1px rgb(212, 212, 212);
   cursor: pointer;
   transition: 0.1s linear;
+  text-wrap: nowrap;
 }
 
 .btn-activo {
@@ -21,6 +22,7 @@
   border: solid 1px rgb(212, 212, 212);
   cursor: pointer;
   transition: 0.1s linear;
+  text-wrap: nowrap;
 }
 
 .btn-inactivo:hover{
