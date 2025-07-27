@@ -18,10 +18,10 @@ const categorias = [
   { icono: <Filter2 size={17} />, texto: 'All Events' },
   { icono: <Music size={17} />, texto: 'Music' },
   { icono: <Trophy size={17} />, texto: 'Sports' },
-  { icono: <Palette size={17} />, texto: 'Arts' },
-  { icono: <Theater size={17} />, texto: 'Theater' },
-  { icono: <Camera size={17} />, texto: 'Food' },
-  { icono: <Gamepad2 size={17} />, texto: 'Gaming' },
+  { icono: <Palette size={17} />, texto: 'Arts & Theater' },
+  { icono: <Gamepad2 size={17} />, texto: 'Casino' },
+  { icono: <Camera size={17} />, texto: 'Individual' },
+  { icono: <Theater size={17} />, texto: 'Donation' },
 ];
 
 export const Filter = () => {
