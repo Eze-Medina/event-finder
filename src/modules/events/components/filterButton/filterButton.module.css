@@ -1,28 +1,29 @@
 .btn-inactivo {
+  background-color: var(--color-bg-btn-desactive);
+  color: var(--color-bg-btn-active);
   display: flex;
-  gap: 15px;
   align-items: center;
-  background-color: white;
-  border-radius: 50px;
   padding: 10px;
-  border: solid 1px rgb(212, 212, 212);
-  cursor: pointer;
-  transition: 0.1s linear;
+  gap: 15px;
   text-wrap: nowrap;
+  border-radius: 50px;
+  border: solid 1px var(--color-input-border);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
 }
 
 .btn-activo {
+  background-color: var(--color-bg-btn-active);
+  color: var(--color-bg-btn-desactive);
   display: flex;
-  gap: 15px;
   align-items: center;
-  background-color: black;
-  color: white;
-  border-radius: 50px;
   padding: 10px;
-  border: solid 1px rgb(212, 212, 212);
-  cursor: pointer;
-  transition: 0.1s linear;
+  gap: 15px;
   text-wrap: nowrap;
+  border-radius: 50px;
+  border: solid 1px var(--color-input-border);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
 }
 
 .btn-inactivo:hover{

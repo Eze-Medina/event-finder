@@ -14,7 +14,7 @@ export const App = () => {
         <div className={style.content}>
           <Nav/>
           <EventFinder/>
-          <Footer/>
+          {/* <Footer/> */}
           { eventModal.active && <EventModal/> }
         </div>
       </div>

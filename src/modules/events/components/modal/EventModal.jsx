@@ -1,8 +1,8 @@
-import { Calendar, MapPin, X } from 'lucide-react'
-import style from './eventModal.module.css'
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showModal } from '../../../../store/slices/event';
+import { Calendar, MapPin, X } from 'lucide-react'
+import style from './eventModal.module.css'
 
 const placeHolder = {
   name: 'New York Yankees vs. Baltimore Orioles',

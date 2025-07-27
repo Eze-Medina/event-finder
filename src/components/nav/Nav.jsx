@@ -1,14 +1,10 @@
-import { useState } from 'react'
+import { useTheme } from '../../hooks/useTheme'
 import { Calendar, Moon, Sun } from "lucide-react"
 import style from './nav.module.css'
 
 export const Nav = () => {
   
-  const [active, setActive] = useState(true)
-  
-  const toggle = () => {
-    setActive(!active)
-  }
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className={style.container}>
@@ -24,10 +20,9 @@ export const Nav = () => {
         <h1>EventHub</h1>
       </div>
       <div className={style.theme}>
-        {
-          active ? 
-            <Moon onClick={toggle} size={20}/> : 
-            <Sun onClick={toggle} size={20}/>
+        { theme === "light"
+          ? <Moon onClick={toggleTheme} size={20} />
+          : <Sun onClick={toggleTheme} size={20} color='white'/>
         }
       </div>  
     </div>

@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { Calendar, MapPin} from 'lucide-react'
-import style from './card.module.css'
 import { useDispatch } from 'react-redux'
 import { chageModalData, showModal } from '../../../../store/slices/event'
+import { Calendar, MapPin} from 'lucide-react'
+import style from './card.module.css'
 
 export const Card = ({ data }) => {
   

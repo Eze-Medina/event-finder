@@ -14,10 +14,12 @@
 input {
   flex: 1;
   padding: 7px;
+  font-size: 1em;
   padding-left: 15px;
   border-radius: 50px 0px 0px 50px;
-  border: solid 2px rgb(212, 212, 212);
-  font-size: 1em;
+  color: var(--color-input-text);
+  border: solid 2px var(--color-input-border);
+  background-color: var(--color-input);
 }
 
 input:focus {
@@ -30,7 +32,8 @@ input:focus {
   align-items: center;
   padding: 4px 15px;
   border-radius: 0px 50px 50px 0px;
-  border: solid 2px rgb(212, 212, 212);
+  border: solid 2px var(--color-input-border);
+  background-color: var(--color-input);
   border-left: none; 
   cursor: pointer;
 }
