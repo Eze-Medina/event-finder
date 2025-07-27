@@ -1,0 +1,76 @@
+.card {
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.type {
+  position: absolute;
+  padding: 10px;
+}
+
+.type p{
+  background-color: #2c3e50;
+  color: white;
+  font-size: 0.8em;
+  margin: 0px;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.card img {
+  width: 100%;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.eventDataContainer {
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eventDataContainer h2 {
+  font-size: 1.1em;
+}
+
+.eventDataContainer p {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 0.9em;
+  color: #5e5e5e;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #2980b9;
+  color: -webkit-linear-gradient(to right, #2c3e50, #2980b9); 
+  color: linear-gradient(to right, #2c3e50, #2980b9);
+}
+
+.detail button {
+  font-family: 'roboto';
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 0px;
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9); 
+  background: linear-gradient(to right, #2c3e50, #2980b9);
+  color: white;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
