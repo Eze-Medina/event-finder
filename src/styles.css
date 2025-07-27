@@ -19,6 +19,7 @@ body {
 [data-theme='light'] {
   --color-bg: white;
   --color-text: black;
+  --color-input: white;
   --color-input-border: #d4d4d4;
   --color-input-outline: #2e93ff93;
 
