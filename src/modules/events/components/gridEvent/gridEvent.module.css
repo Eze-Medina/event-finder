@@ -13,6 +13,7 @@
 
 .page p {
   margin: 0px;
+  color: var(--color-text);
 }
 
 .page button {

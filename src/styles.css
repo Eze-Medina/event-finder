@@ -7,8 +7,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  --color-bg: #ffffff;
+  --color-text: #000000;
 }
 
 body {
   margin: 0px;
+}
+
+[data-theme='light'] {
+  --color-bg: white;
+  --color-text: black;
+  --color-input: white;
+  --color-input-border: #d4d4d4;
+  --color-input-outline: #2e93ff93;
+
+  --color-bg-btn-active: #1d1d1d;
+  --color-bg-btn-desactive: white;
+}
+[data-theme='dark'] {
+  --color-bg: #283147;
+  --color-text: white;
+  --color-input: #161616;
+  --color-input-border: #131313;
+  --color-input-outline: #2e93ff93;
+
+  --color-bg-btn-active: white;
+  --color-bg-btn-desactive: #1d1d1d;
 }
