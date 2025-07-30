@@ -1,0 +1,46 @@
+.container1 {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.4fr;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.element{
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 7px;
+  font-size: 1em;
+  padding-left: 15px;
+  border-radius: 50px 0px 0px 50px;
+  color: var(--color-text);
+  border: solid 2px var(--color-input-border);
+  background-color: var(--color-input);
+}
+
+input:focus {
+  border-color: #2e93ff93; 
+  outline: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 4px 15px;
+  border-radius: 0px 50px 50px 0px;
+  border: solid 2px var(--color-input-border);
+  background-color: var(--color-input);
+  border-left: none; 
+  cursor: pointer;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}

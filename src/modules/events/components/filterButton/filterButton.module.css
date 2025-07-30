@@ -1,0 +1,35 @@
+.btn-inactivo {
+  background-color: var(--color-bg-btn-desactive);
+  color: var(--color-bg-btn-active);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  text-wrap: nowrap;
+  border-radius: 50px;
+  border: solid 1px var(--color-input-border);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.btn-activo {
+  background-color: var(--color-bg-btn-active);
+  color: var(--color-bg-btn-desactive);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  text-wrap: nowrap;
+  border-radius: 50px;
+  border: solid 1px var(--color-input-border);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.btn-inactivo:hover{
+  transform: scale(1.1);
+}
+
+.btn-activo:hover{
+  transform: scale(1.1);
+}
