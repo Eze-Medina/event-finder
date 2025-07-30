@@ -17,7 +17,7 @@ input {
   font-size: 1em;
   padding-left: 15px;
   border-radius: 50px 0px 0px 50px;
-  color: var(--color-input-text);
+  color: var(--color-text);
   border: solid 2px var(--color-input-border);
   background-color: var(--color-input);
 }

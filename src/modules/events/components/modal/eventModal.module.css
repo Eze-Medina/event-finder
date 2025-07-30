@@ -18,7 +18,17 @@
   background-color: var(--color-input);
   color: var(--color-text);
   border-radius: 15px;
+  animation: show 0.2s ease-in-out forwards;
   position: relative;
+}
+
+@keyframes show{
+  0% { opacity: 0; }
+  20% { opacity: 0.2; }
+  40% { opacity: 0.4; }
+  60% { opacity: 0.6; }
+  80% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
 .modalContent button {
   position: absolute;
